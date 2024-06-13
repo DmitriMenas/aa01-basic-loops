@@ -7,7 +7,15 @@ Feel free to use this variable: let alphabet = "abcdefghijklmnopqrstuvwxyz";
 */
 
 function caesarCipher(string, num) {
-    // Your code here 
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let arr = string.split('');
+    for (let i = 0; i < arr.length; i++) {
+        let alphabetIndex = alphabet.indexOf(arr[i]);
+        if (alphabetIndex !== -1){
+            arr[i] = alphabet[(alphabetIndex + num) % alphabet.length]
+        }
+    }
+    return arr.join('')
 }
 
 // console.log(caesarCipher("apple", 1)); // "bqqmf"

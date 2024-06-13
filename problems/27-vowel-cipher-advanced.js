@@ -5,9 +5,20 @@ where every vowel becomes the next vowel in the alphabet.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function vowelCipher(str) {
+    let vowels = 'aeiou';
+    let arr = str.split('');
 
-// console.log(vowelCipher("bootcamp")); // "buutcemp"
+    for (let i = 0; i < arr.length; i++) {
+        let vowelIndex = vowels.indexOf(arr[i]);
+        if (vowelIndex !== -1) {
+            arr[i] = vowels[(vowelIndex + 1) % vowels.length];
+        }
+    }
+
+    return arr.join('');
+}
+//console.log(vowelCipher("bootcamp")); // "buutcemp"
 // console.log(vowelCipher("paper cup")); // "pepir cap"
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

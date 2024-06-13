@@ -5,7 +5,13 @@ string in reverse order.
 */
 
 function elementsOfOddIndicesReversed(str) {
-  // Your code here 
+  let arr = []
+  for(let i = str.length - 1; i >= 0; i--){
+    if (i % 2 !== 0){
+      arr.push(str[i]);
+    }
+  }
+  return arr.join('');
 }
 
 // console.log(elementsOfOddIndicesReversed('academy')); // 'mdc'

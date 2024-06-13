@@ -6,6 +6,9 @@ Vowels are the letters "a", "e", "i", "o", "u".
 */
 
 // Your code here 
+function abbreviate(str){
+    return str.replace(/[aeiou]/gi, '');
+}
 
 // console.log(abbreviate('wonderful')); // 'wndrfl'
 // console.log(abbreviate('mystery')); // 'mystry'

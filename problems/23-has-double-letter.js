@@ -5,7 +5,17 @@ character consecutively. If the value passed into the function is not a string,
 return null.
 */
 
-// Your code here 
+function hasDoubleLetter(str){
+    if((typeof str === "number") || Array.isArray(str)){
+        return null;
+    }
+    for(let i = 0; i < str.length - 1; i++){
+     if(str[i] === str[i + 1]){
+            return true;
+        }
+    }
+    return false;
+}
 
 // console.log(hasDoubleLetter('deer')); // true
 // console.log(hasDoubleLetter('boot camp')); // true

@@ -7,7 +7,20 @@ not a string, say someone passes in a number as an argument, then return null.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function reverb(word){
+    let lVowel = 'aeiou';
+    let uVowel = 'AEIOU'
+    let end = ''
+    for(let i = word.length; i >= 0; i--){
+        if (!isNaN(word)){
+            return word;
+        } else if(lVowel.includes(word[i]) || uVowel.includes(word[i])){
+            end = word.slice(word.indexOf(word[i]), word.length)
+            return `${word}${end}`;
+        }
+    }
+    return null;
+}
 
 // console.log(reverb('running')); // runninging
 // console.log(reverb('FAMILY'));  // FAMILYILY
@@ -15,6 +28,7 @@ Vowels are the letters "a", "e", "i", "o", "u".
 // console.log(reverb('DISH'));    // DISHISH
 // console.log(reverb('197393'));  // 197393
 // console.log(reverb(197393));    // null
+
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = reverb;

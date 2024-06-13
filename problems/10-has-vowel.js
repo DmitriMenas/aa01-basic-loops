@@ -6,9 +6,17 @@ otherwise.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function hasVowel(str){
+    let vowel = "aeiou"
+    for( let i = 0; i < vowel.length; i++){
+        if (str.includes(vowel[i])){
+            return true;
+        }
+    }
+    return false;
+}
 
-// console.log(hasVowel('dog'));          // => true
+console.log(hasVowel('dog'));          // => true
 // console.log(hasVowel('conventional')); // => true
 // console.log(hasVowel('rhythm'));       // => false
 

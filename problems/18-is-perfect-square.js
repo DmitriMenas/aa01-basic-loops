@@ -9,7 +9,13 @@ For example, since 64 = 8 * 8 and 144 = 12 * 12, 64 and 144 are perfect squares;
 35 is not a perfect square.
 */
 
-// Your code here 
+function isPerfectSquare(num){
+    if (num <= 0 || typeof num !== "number") {
+        return false;
+    }
+    let root = Math.sqrt(num);
+    return Number.isInteger(root);
+}
 
 // console.log(isPerfectSquare(1))     // true
 // console.log(isPerfectSquare(4))     // true
